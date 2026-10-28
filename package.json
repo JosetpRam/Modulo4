@@ -1,0 +1,14 @@
+{
+  "name": "proyecto-bootstrap-sass-npm",
+  "version": "1.0.0",
+  "description": "Proyecto académico con Bootstrap, jQuery, JavaScript, Sass y salida de producción",
+  "private": true,
+  "scripts": {
+    "scss": "node-sass -o css/ scss/",
+    "build": "npm run scss && node scripts/build.js",
+    "clean": "node scripts/clean.js"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

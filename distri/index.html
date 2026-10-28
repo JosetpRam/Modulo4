@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Proyecto demostrativo de Bootstrap, jQuery, JavaScript y Sass.">
+  <title>Proyecto Bootstrap + Sass</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Mi Proyecto</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#componentes">Componentes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero text-center">
+    <div class="container">
+      <span class="badge badge-warning mb-3">HTML · Bootstrap · jQuery · Sass</span>
+      <h1>Desarrollo web moderno</h1>
+      <p class="lead">Componentes interactivos, estilos reutilizables y tareas automatizadas con NPM.</p>
+      <button id="openModalBtn" type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#demoModal">
+        Abrir modal
+      </button>
+    </div>
+  </header>
+
+  <main class="container py-5" id="componentes">
+    <div class="text-center mb-4">
+      <h2>Componentes de Bootstrap</h2>
+      <p class="text-muted">Este proyecto demuestra el uso de tarjetas, navegación y una ventana modal.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap</h5>
+            <p class="card-text">Diseño adaptable con componentes listos para utilizar.</p>
+            <span class="badge badge-success">Responsive</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">jQuery y JavaScript</h5>
+            <p class="card-text">Control de eventos del modal y del botón que lo activa.</p>
+            <span class="badge badge-danger">Interactivo</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Sass</h5>
+            <p class="card-text">Variables y mixins para mantener los estilos organizados.</p>
+            <span class="badge badge-warning">Preprocesador</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="contacto" class="contact-panel mt-4">
+      <h3>Zona de contacto</h3>
+      <p class="mb-0">Ejemplo de sección adicional para completar la estructura del sitio.</p>
+    </section>
+  </main>
+
+  <footer class="text-center py-4">
+    <p class="mb-0">&copy; 2026 Mi Proyecto Web · Creado con Bootstrap y Sass</p>
+  </footer>
+
+  <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="demoModalLabel">Modal de demostración</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          ¡El modal funciona! Revisa la consola del navegador (F12 → Console) para ver el registro de sus cuatro eventos.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

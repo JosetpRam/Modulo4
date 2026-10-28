@@ -1,0 +1,81 @@
+// Variables de color solicitadas
+$amarillo: #ffc107;
+$rojo: #dc3545;
+$verde: #28a745;
+$oscuro: #212529;
+$claro: #f8f9fa;
+
+// Mixin con márgenes, padding y colores reutilizables
+@mixin panel-estilo($fondo, $texto: $oscuro) {
+  margin: 1.5rem 0;
+  padding: 2rem;
+  color: $texto;
+  background-color: $fondo;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+}
+
+body {
+  color: $oscuro;
+  background: $claro;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  @include panel-estilo($verde, #fff);
+  margin: 0;
+  padding: 5rem 1rem;
+  border-radius: 0;
+  background-image: linear-gradient(135deg, darken($verde, 12%), $verde);
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero .lead {
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+}
+
+.card {
+  border: 0;
+  border-top: 4px solid $amarillo;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.contact-panel {
+  @include panel-estilo(lighten($amarillo, 35%));
+  border-left: 5px solid $rojo;
+}
+
+footer {
+  color: #fff;
+  background-color: $oscuro;
+}
+
+#openModalBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-panel {
+    padding: 1.25rem;
+  }
+}
